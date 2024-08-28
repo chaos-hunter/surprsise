@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade In Text</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #message {
+            font-size: 6rem;
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            background: linear-gradient(to right, #800080, #da70d6, #800080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">You're pretty</div>
+
+    <script>
+        window.onload = function() {
+            const message = document.getElementById('message');
+            setTimeout(() => {
+                message.style.opacity = 1;
+            }, 500); // Delay of 500ms before the fade-in
+        };
+    </script>
+</body>
+</html>
